@@ -1,3 +1,4 @@
+ function totalPhoneBill(myBill){
  var totalCost = 0;
  var cost = myBill.split (', ');
 for (var i =0; i < cost.length; i++) {
@@ -7,5 +8,7 @@ for (var i =0; i < cost.length; i++) {
   } else { totalCost+=0.65};
   
 }
-  return 'R' +totalCost.toFixed(2);
-console.log(totalPhoneBill('call, sms, call, sms, sms'));
+  return 'R' +totalCost.toFixed(2);}
+
+//console.log(totalPhoneBill('call, sms, call, sms, sms'));
+

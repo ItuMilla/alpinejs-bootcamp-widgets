@@ -7,7 +7,10 @@ function enoughAirtime(projectedUsage, airtimeAvailable){
     console.log(projectedAirtimeUsage);
   
     for(var i=0; i<projectedAirtimeUsage.length; i++){
-      if(projectedAirtimeUsage[i].startsWith('call')){
+      if(!projectedUsage){
+        return "please enter string"
+      }
+      else if(projectedAirtimeUsage[i].startsWith('call')){
          airtimeUsed += call;
       }else if(projectedAirtimeUsage[i].startsWith('sms')){
         airtimeUsed += sms;

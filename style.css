@@ -1,14 +1,27 @@
 .body {
-    background-color: rgb(50, 165, 42);
+    background-color: orange;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .message {
     padding: 1em;
-    background-color: lightpink;
+    background-color: lightseagreen;
     margin-bottom: 1em;
   }
   
+  .btn {
+    border-radius: 0.2em;
+    margin: 1em .5em 1em .5em;
+    width: 25%;
+    height: 25%; 
+  }
+  button {
+    border-radius: 0.2em;
+    margin: 1em .5em 1em .5em;
+    width: 25%;
+    height: 25%;
+  }
+
   .input > label {
       display: inline-block;
       width: 15em;
@@ -25,6 +38,9 @@
 .widgets {
     display: flex;
 }
+.btn{
+    width: 9em;
+}
 
 .widget {
     flex: 1;
@@ -33,3 +49,24 @@
     padding: 1em;
     border-radius: 0.5em;
 }
+
+
+h1 {
+    text-align: center;
+    background-color: lightseagreen;
+    border-radius: 0.5em;
+}
+
+@media(min-width:960px){
+    .widgets{
+        display: flex;
+    }
+}
+    
+span {
+    background-color: pink;
+  }
+  
+  span>span {
+    margin: .5em;
+  }

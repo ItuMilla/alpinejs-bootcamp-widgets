@@ -9,6 +9,9 @@ document.addEventListener('alpine:init', () => {
 
                 const amount= enoughAirtime(this.airtimeUsage,this.availableAmount);
                 this.airtimeMessage=amount;
+                setTimeout (() =>{
+                    this.airtimeMessage='';
+                }, 3000);
             }
         }
 

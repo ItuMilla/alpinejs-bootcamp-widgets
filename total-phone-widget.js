@@ -1,10 +1,14 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('totalbillWidget', function () {
         return {
-            airtimeUsage: '',
-             airtimeMessage: '',
-             calculate1(){
-             this.airtimeMessage = totalPhoneBill(this.airtimeUsage)
+            itemUsed: '',
+             billMessage: '',
+             billDue(){
+             this.billMessage = totalPhoneBill(this.itemUsed)
+             
+             setTimeout (() => {
+                this.billMessage='';
+             }, 3000);
           }
         }
     });  
