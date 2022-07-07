@@ -5,7 +5,7 @@
 
 .message {
     padding: 1em;
-    background-color: lightseagreen;
+    background-color: pink;
     margin-bottom: 1em;
   }
   
@@ -36,6 +36,8 @@
 
 
 .widgets {
+    background-color: lightseagreen;
+    border-radius: 0.5em;
     display: flex;
 }
 .btn{
@@ -59,9 +61,21 @@ h1 {
 
 @media(min-width:960px){
     .widgets{
-        display: flex;
+        display: flex;   
     }
+    body {
+        background-color: brown ;
+    }   
 }
+
+
+@media (min-width: 500px){
+    body { 
+   background-color:pink;
+}
+}
+
+
     
 span {
     background-color: pink;

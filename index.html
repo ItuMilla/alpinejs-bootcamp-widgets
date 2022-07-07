@@ -19,6 +19,7 @@
 
     <script src="transport-fee.js"></script>
     <script src="transport-fee-widget.js"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
 
    
 
@@ -27,6 +28,16 @@
 </head>
 
 <body>
+    <!--<div x-data="{
+        init() {
+            axios
+        .get('https://pizza-cart-api.herokuapp.com/api/pizzas')
+        .then((result) => {
+        
+        })
+        }
+    }" ></div>-->
+
     <div> 
        <h1>Alpinejs Bootcamp Widgets</h1> 
     </div>
@@ -38,26 +49,24 @@
           </div>
           <div class="input">
               <label for="name">Plesase enter your name: </label>
-              <input type="text" placeholder="itumeleng" x-model="name" id="name">
+              <input type="text" placeholder="name" x-model="name" id="name">
           </div>
           <div><button x-on:click="greetMe" >Greet!</button></div>
           </div>
 
           <div class="widget" x-data="enoughAirtimeWidget">
             <h2>Enough Airtime Widget</h2>
+            <div x-show="airtimeMessage.length>0" class="message" x-text="airtimeMessage">
+                Number/Amount of airtime left displayed here...
+            </div>
             <div class="input">
                 <label for="usage">Please enter your projected airtime usage: </label>
                 <input type="text" placeholder="call,sms" x-model="airtimeUsage" id="usage">
             </div>
             <div class="input">
                 <label for="amount">Amount Available: </label>
-                <input type="text" placeholder="amount you have" x-model="availableAmount" id="amount">
+                <input type="text" placeholder="amount" x-model="availableAmount" id="amount">
             </div>
-          
-            <div x-show="airtimeMessage.length>0" class="message" x-text="airtimeMessage">
-                Number/Amount of airtime left displayed here...
-            </div>
-          
             <div>
                 <button class="btn" x-on:click="calculate">Calculate airtime usage</button>
             </div>
@@ -65,14 +74,13 @@
 
           <div class="widget" x-data="totalbillWidget">
             <h2>Total Phone Bill Widget</h2>
+            <div x-show="billMessage.length>0" class="message" x-text="billMessage">
+                Your total bill will be displayed here ...
+             </div>
             <div class="input ">
 
                 <label for="bill"> Please enter your bill: </label>
                 <input type="text" id="bill" placeholder="items here" x-model="itemUsed">
-            </div>
-      
-            <div x-show="billMessage.length>0" class="message" x-text="billMessage">
-               Your total bill will be displayed here ...
             </div>
             <div>
                 <button class="btn" x-on:click="billDue"> Check bill</button>
@@ -80,7 +88,10 @@
         </div>
 
         <div class="widget" x-data="transportFeeWidget">
-            <h2>Transport Widget</h2>            
+            <h2>Transport Fee Widget</h2> 
+            <div x-show="message.length>0" class="message" x-text="message">
+                Your transport fees will be shown here...
+            </div>     
             <p><strong>Choose the shift you are working today:</strong></p>
             <form>
                 <input type="radio" id="morning" value="morning" x-model="shift">
@@ -90,10 +101,7 @@
                 <input type="radio" id="nightShift" name="shift" value="nightShift" x-model="shift">
                 <label for="nightShift">nightShift</label><br><br>
                 <strong>Your transport fee will be displayed after choosing your shift... </strong><span x-text="shiftFee"></span>       
-            </form>
-            <div x-show="message.length>0" class="message" x-text="message">
-                Your transport fees will be shown here...
-            </div>   
+            </form>      
         </div>
 </div>
 

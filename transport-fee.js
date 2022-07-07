@@ -1,12 +1,11 @@
-
-  function transportFee(shift){
-    if(shift==="morning"){
-        return "R20";
-    }
-  else if (shift==="afternoon"){
-      return "R10";
+function transportFee(shift){
+  if(shift==="morning"){
+     return "R20";
   }
-  else{
-      return "free";
-  }
+ else if (shift==="afternoon"){
+    return "R10";
+ }
+ else{
+    return "free";
+ }
 }
